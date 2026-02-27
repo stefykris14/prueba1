@@ -22,6 +22,24 @@ namespace prueba1
             Console.Write("Ingrese hora de salida (ejemplo 14.5 = 14:30): ");
 
             double horaSalida = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Error: la hora de salida debe ser mayor que la de entrada.");
+            if (horaSalida <= horaEntrada)
+            {
+                Console.WriteLine("Error: la hora de salida debe ser mayor que la de entrada.");
+            }
+            else
+            {
+                horas = horaSalida - horaEntrada;
+                total = horas * tarifaPorHora;
+
+                Console.WriteLine("\nTiempo total: " + horas + " horas");
+                Console.WriteLine("Tarifa por hora: $" + tarifaPorHora);
+                Console.WriteLine("TOTAL A PAGAR: $" + total);
+            }
+
+            Console.WriteLine("\nPresione una tecla para salir...");
+            Console.ReadKey();
         }
+
     }
 }
